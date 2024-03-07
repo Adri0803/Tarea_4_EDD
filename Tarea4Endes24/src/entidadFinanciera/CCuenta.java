@@ -23,13 +23,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Crea una instancia de CCuenta con valores nulos o por defecto
+     */
     public CCuenta()
     {
     }
 
-    /**
-     * Atributos de la clase inicializados
-     */
+ /**
+  * Constructor para incializar atributos
+  * @param nom nombre inicializado
+  * @param cue cuenta inicializado
+  * @param sal saldo inicializado
+  * @param tipo No se utiliza en la construcción de ccuenta pero es el tipo de interés
+  */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -40,7 +47,7 @@ public class CCuenta {
     
     /**
      * Devuelve el estado de la cuenta
-     * @return saldo de l cuenta
+     * @return saldo de la cuenta
      */
     public double estado(){
         return this.saldo;
@@ -74,42 +81,76 @@ public class CCuenta {
         saldo = saldo - cantidad;
     }
     
-    /**
-     * A continuación todos los atributos de la clase encapsulados:
-     */
 
+    /** A continuación los atributos encapsulados
+     * Get
+     * @return Devuelve el nombre del dueño
+     */
 	public String getNombre() {
 		return nombre;
 	}
 
+/**
+ * Set
+ * @param nombre se establece el nombre
+ */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
+	/**
+	 * Get
+	 * @return Devuelve la cuenta
+	 */
 	public String getCuenta() {
 		return cuenta;
 	}
 
+
+/**
+ * Set
+ * @param cuenta establece la ceunta
+ */
 	public void setCuenta(String cuenta) {
 		this.cuenta = cuenta;
 	}
 
+/**
+ * Get
+ * @return devuelve el saldo de la cuenta
+ */
 	public double getSaldo() {
 		return saldo;
 	}
 
+/**
+ * Set
+ * @param saldo establece el saldo de la cuenta
+ */
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
+/**
+ * Get
+ * @return devuelve el tipo de interés
+ */
 	public double getTipoInterés() {
 		return tipoInterés;
 	}
 
+/**
+ * Set
+ * @param tipoInterés establece el tipo de interés
+ */
 	public void setTipoInterés(double tipoInterés) {
 		this.tipoInterés = tipoInterés;
 	}
 
+/**
+ * Get
+ * @return devuelve un error si la cantidad introducida es negativa
+ */
 	public static String getErrorcantidadnegativa() {
 		return ERRORCANTIDADNEGATIVA;
 	}
