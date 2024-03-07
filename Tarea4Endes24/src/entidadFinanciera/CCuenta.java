@@ -1,3 +1,9 @@
+/**
+ * @author Adrián Pérez Chillarón
+ * @version 07/03/2024
+ * @see Main
+ */
+
 package entidadFinanciera;
 
 /**
