@@ -16,7 +16,7 @@ public class CCuenta {
 
     public static final String ERRORCANTIDADNEGATIVA = "No se puede retirar una cantidad negativa";
 	/**
-     * Nombre de la persona titular
+     * Nombre de la persona titular y demás atributos declarados
      */
     private String nombre;
     private String cuenta;
@@ -28,7 +28,7 @@ public class CCuenta {
     }
 
     /**
-     * Variables
+     * Atributos de la clase inicializados
      */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
