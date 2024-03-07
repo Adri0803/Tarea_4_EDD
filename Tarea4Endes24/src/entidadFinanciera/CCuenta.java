@@ -1,12 +1,18 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Autor: Adrián Pérez Chillarón
  */
 
 package entidadFinanciera;
 
+/**
+ * Clase correspondiente a una cuenta bancaria de un usuario
+ */
 
 public class CCuenta {
+	
+	/**
+	 * Devolverá el texto de que la cantidad no puede ser negativa
+	 */
 
     public static final String ERRORCANTIDADNEGATIVA = "No se puede retirar una cantidad negativa";
 	/**
@@ -21,6 +27,9 @@ public class CCuenta {
     {
     }
 
+    /**
+     * Variables
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -29,10 +38,19 @@ public class CCuenta {
     }
     
     
-    
+    /**
+     * Devuelve el estado de la cuenta
+     * @return saldo de l cuenta
+     */
     public double estado(){
         return this.saldo;
     }
+    
+    /**
+     * Ingresa una cantidad de dinero en la cuenta
+     * @param cantidad dinero a ingresar
+     * @throws Exception si la cantidad a ingresar es negativa
+     */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -40,6 +58,12 @@ public class CCuenta {
             throw new Exception(ERRORCANTIDADNEGATIVA);
         saldo = saldo + cantidad;
     }
+    
+    /**
+     * Retirará dinero de la cuenta
+     * @param cantidad dinero a sacar d ela cuenta
+     * @throws Exception si la cantidad es negativa o no hay saldo suficiente
+     */
 
     public void retirar(double cantidad) throws Exception
     {
@@ -49,6 +73,10 @@ public class CCuenta {
             throw new Exception ("No se hay suficiente saldo");
         saldo = saldo - cantidad;
     }
+    
+    /**
+     * A continuación todos los atributos de la clase encapsulados:
+     */
 
 	public String getNombre() {
 		return nombre;

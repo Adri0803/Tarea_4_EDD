@@ -21,7 +21,7 @@ public class Main {
         } catch (Exception e) {
             System.err.println("Error al retirar dinero: " + e.getMessage());
         }
-
+        
         try {
             probarIngresar(objetoCuenta, 600);
         } catch (Exception e) {
