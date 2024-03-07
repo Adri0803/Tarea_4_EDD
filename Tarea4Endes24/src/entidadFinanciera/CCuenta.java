@@ -8,9 +8,6 @@ package entidadFinanciera;
 
 /**
  * Clase correspondiente a una cuenta bancaria de un usuario
- * @author Adrián Pérez Chillarón
- * @version 07/03/2024
- * @see Main
  */
 
 public class CCuenta {
